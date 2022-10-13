@@ -12,6 +12,7 @@ public class Controller {
         this.view = view;
     }
 
+<<<<<<< HEAD
     public void init(){
 
     }
@@ -26,6 +27,9 @@ public class Controller {
         view.setController(controller);
         view.init();
         controller.init();
+=======
+    public static void main(String[] args) {
+>>>>>>> 83a2e69 (First commit)
 
     }
 
