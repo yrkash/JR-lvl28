@@ -12,24 +12,7 @@ public class Controller {
         this.view = view;
     }
 
-<<<<<<< HEAD
-    public void init(){
-
-    }
-
-    public void exit() {
-        System.exit(0);
-    }
-
     public static void main(String[] args) {
-        View view = new View();
-        Controller controller = new Controller(view);
-        view.setController(controller);
-        view.init();
-        controller.init();
-=======
-    public static void main(String[] args) {
->>>>>>> 83a2e69 (First commit)
 
     }
 
