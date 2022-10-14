@@ -1,0 +1,7 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+out/
+*.iml
+src/com/javarush/task/task28/
+.idea/
