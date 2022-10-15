@@ -9,6 +9,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class View extends JFrame implements ActionListener {
+    public View() {
+        try {
+            UIManager.setLookAndFeel(UIManager.getLookAndFeel());
+        } catch (UnsupportedLookAndFeelException e) {
+            ExceptionHandler.log(e);
+        }
+    }
 
     private Controller controller;
 
@@ -24,7 +31,15 @@ public class View extends JFrame implements ActionListener {
     }
 
     public void initMenuBar() {
-
+        JMenuBar menuBar = new JMenuBar();
+        MenuHelper.initFileMenu(this, menuBar);
+        MenuHelper.initEditMenu(this, menuBar);
+        MenuHelper.initStyleMenu(this, menuBar);
+        MenuHelper.initAlignMenu(this, menuBar);
+        MenuHelper.initColorMenu(this, menuBar);
+        MenuHelper.initFontMenu(this, menuBar);
+        MenuHelper.initHelpMenu(this, menuBar);
+        getContentPane().add(menuBar, BorderLayout.NORTH);
     }
 
     public void initEditor() {
