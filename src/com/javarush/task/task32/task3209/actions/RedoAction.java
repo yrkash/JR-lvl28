@@ -19,8 +19,4 @@ public class RedoAction extends AbstractAction {
 
     }
 
-    @Override
-    public boolean accept(Object sender) {
-        return false;
-    }
 }

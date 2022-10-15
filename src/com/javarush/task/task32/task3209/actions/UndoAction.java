@@ -18,8 +18,4 @@ public class UndoAction extends AbstractAction {
 
     }
 
-    @Override
-    public boolean accept(Object sender) {
-        return false;
-    }
 }

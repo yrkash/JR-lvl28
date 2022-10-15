@@ -16,8 +16,4 @@ public class SuperscriptAction extends StyledEditorKit.StyledTextAction {
 
     }
 
-    @Override
-    public boolean accept(Object sender) {
-        return false;
-    }
 }
