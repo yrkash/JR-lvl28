@@ -29,6 +29,25 @@ public class View extends JFrame implements ActionListener {
     private JTextPane htmlTextPane = new JTextPane();
     private JEditorPane plainTextPane  = new JEditorPane();
 
+    public void selectHtmlTab() {
+        tabbedPane.setSelectedIndex(0);
+        resetUndo();
+    }
+
+    public void update() {
+        htmlTextPane.setDocument(controller.getDocument());
+    }
+
+    public void showAbout() {
+        String message = "Here is information about app";
+        JOptionPane optionPane = new JOptionPane();
+        JOptionPane.showMessageDialog(optionPane, message, "About", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    public boolean isHtmlTabSelected() {
+        return (tabbedPane.getSelectedIndex() == 0) ? true : false;
+    }
+
     public void undo() {
         try {
             undoManager.undo();
@@ -45,7 +64,7 @@ public class View extends JFrame implements ActionListener {
         }
     }
 
-       public void init(){
+    public void init(){
         initGui();
         FrameListener listener = new FrameListener(this);
         addWindowListener(listener);
